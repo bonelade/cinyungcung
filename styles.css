@@ -142,7 +142,7 @@ em {
 
 .masthead-bar {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px 20px;
     font-size: 0.96rem;
     color: var(--color-ink-muted);
@@ -2412,7 +2412,7 @@ input[type=range]::-moz-range-thumb {
 
 .components-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 18px;
     margin-top: 12px;
 }
@@ -2563,7 +2563,7 @@ input[type=range]::-moz-range-thumb {
 
 .gov-units-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin: 15px 0;
 }
@@ -2605,7 +2605,7 @@ input[type=range]::-moz-range-thumb {
 
 .reporting-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     margin-top: 15px;
 }
@@ -2741,7 +2741,7 @@ input[type=range]::-moz-range-thumb {
 
 .circular-flow-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin-top: 15px;
 }
@@ -2874,4 +2874,59 @@ input[type=range]::-moz-range-thumb {
     letter-spacing: 0.5px;
     margin-bottom: 6px;
     text-align: center;
+}
+
+
+/* ==========================================================================
+   STABLE RESPONSIVE LAYOUT ENGINE (NO LAYOUT SHIFTING)
+   ========================================================================== */
+.container {
+    width: 100% !important;
+    max-width: 980px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+}
+
+.components-grid,
+.gov-flowchart-grid,
+.reporting-flow-container,
+.details-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+}
+
+/* Table container stability */
+.table-container {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+.proposal-table,
+.integration-table {
+    width: 100% !important;
+    min-width: 600px;
+}
+
+/* Mobile responsive single-column layout */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .components-grid,
+    .gov-flowchart-grid,
+    .reporting-flow-container,
+    .details-grid,
+    .grid-2-cols,
+    .grid-3-cols,
+    .comp-theory-practice,
+    .simulator-grid,
+    .circular-web-layout {
+        grid-template-columns: 1fr !important;
+    }
 }
