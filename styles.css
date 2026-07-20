@@ -2942,22 +2942,6 @@ p, .article-paragraph, .summary-paragraph {
 }
 
 .proposal-cover-page {
-    width: 210mm !important;
-    height: 297mm !important;
-    min-height: 297mm !important;
-    max-height: 297mm !important;
-    padding: 30mm 20mm 25mm 20mm !important;
-    margin: 35px auto !important;
-    background: #FFFFFF !important;
-    border: 1.5px solid #1A3A6B !important;
-    box-shadow: 0 8px 24px rgba(26, 58, 107, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    position: relative !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    overflow: hidden !important;
-    text-align: center !important;
     background: #FFFFFF;
     border: 4px double #1A3A6B;
     padding: 50px 35px;
@@ -3019,14 +3003,6 @@ p, .article-paragraph, .summary-paragraph {
 }
 
 .approval-sheet-box {
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    flex-grow: 1 !important;
     background: #FFFFFF;
     border: 1px solid #C5C5D5;
     border-top: 4px solid #1A3A6B;
@@ -3050,361 +3026,101 @@ p, .article-paragraph, .summary-paragraph {
 
 
 /* ==========================================================================
-   FORMAT DOKUMEN KERTAS A4 DENGAN PAGE BREAK RESMI
+   FORMAT NASKAH PROPOSAL FORMAL RESMI (CLEAN FORMAL DOCUMENT STYLES)
    ========================================================================== */
 body {
-    background-color: #EFEFEF !important;
-    margin: 0;
-    padding: 30px 0;
+    background-color: #F8FAFC !important;
+    color: #1A1A2E !important;
+    font-family: 'Times New Roman', Times, serif !important;
 }
 
-.a4-page {
-    width: 210mm;
-    min-height: 297mm;
-    padding: 25mm 20mm 25mm 20mm;
-    margin: 0 auto 35px auto;
+p, .article-paragraph, .summary-paragraph {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+    line-height: 1.8 !important;
+}
+
+.proposal-cover-page {
     background: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    position: relative;
-    box-sizing: border-box;
-    page-break-after: always;
-    break-after: page;
-}
-
-.a4-page-landscape {
-    width: 297mm !important;
-    min-height: 210mm !important;
-    padding: 20mm 20mm 25mm 20mm !important;
-    margin: 0 auto 35px auto !important;
-    background: #FFFFFF !important;
-    border: 1px solid #CCCCCC !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
-    position: relative !important;
-    box-sizing: border-box !important;
-    page-break-after: always !important;
-    break-after: page !important;
-}
-
-.a4-footer {
-    position: absolute;
-    bottom: 12mm;
-    left: 20mm;
-    right: 20mm;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 0.82rem;
-    color: #666688;
-    border-top: 1px solid #D5D5E5;
-    padding-top: 6px;
-}
-
-.page-break-divider {
-    width: 100%;
-    max-width: 210mm;
-    margin: -15px auto 20px auto;
+    border: 1px solid #C5C5D5;
+    border-top: 4px solid #1A3A6B;
+    border-left: 4px solid #1A3A6B;
+    padding: 45px 35px;
+    margin: 30px 0;
     text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 0.75rem;
-    color: #888899;
-    letter-spacing: 0.05em;
+}
+
+.approval-sheet-box {
+    background: #FFFFFF;
+    border: 1px solid #C5C5D5;
+    border-top: 4px solid #1A3A6B;
+    border-left: 4px solid #1A3A6B;
+    padding: 45px 35px;
+    margin: 30px 0;
+}
+
+.cover-header-badge {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: #1A3A6B;
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-@media screen and (max-width: 210mm) {
-    .a4-page, .a4-page-landscape {
-        width: 100% !important;
-        min-height: auto !important;
-        padding: 20px 16px !important;
-        margin: 15px 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    .a4-footer {
-        position: static !important;
-        margin-top: 25px !important;
-        padding-top: 8px !important;
-    }
+.cover-double-line {
+    border: none;
+    border-top: 3px double #1A3A6B;
+    margin: 15px 0 25px 0;
 }
 
-@media print {
-    @page {
-        size: A4 portrait;
-        margin: 15mm;
-    }
-    body {
-        background: #FFFFFF !important;
-        padding: 0 !important;
-    }
-    .a4-page, .a4-page-landscape {
-        width: 100% !important;
-        min-height: initial !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-        page-break-after: always !important;
-        break-after: page !important;
-    }
-    .page-break-divider {
-        display: none !important;
-    }
+.cover-single-line {
+    border: none;
+    border-top: 1px solid #1A3A6B;
+    margin: 25px 0;
 }
 
-
-/* ==========================================================================
-   TAMPILAN DOKUMEN MURNI TANPA BINGKAI PAGE BREAK VISIBEL
-   ========================================================================== */
-body {
-    background-color: #FFFFFF !important;
-    padding: 0 !important;
-    margin: 0 !important;
+.cover-main-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    color: #1A1A2E;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-.a4-page, .a4-page-landscape {
-    width: 100% !important;
-    max-width: 980px !important;
-    min-height: auto !important;
-    padding: 24px 0 !important;
-    margin: 0 auto !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+.cover-sub-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #4A4A6A;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
 }
 
-.a4-footer, .page-break-divider {
-    display: none !important;
+.cover-identity-box {
+    text-align: left;
+    background: #F4F6FA;
+    border-left: 4px solid #1A3A6B;
+    padding: 20px 25px;
+    margin-top: 30px;
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
-@media print {
-    @page {
-        size: A4 portrait;
-        margin: 15mm;
-    }
-    .a4-page, .a4-page-landscape {
-        page-break-after: always !important;
-        break-after: page !important;
-        padding: 0 !important;
-    }
+.signature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-top: 40px;
 }
 
-
-/* ==========================================================================
-   TAMPILAN PAGE BREAK SANGAT JELAS & PROMINEN (PROMINENT PAGE BREAKS)
-   ========================================================================== */
-body {
-    background-color: #E2E4E8 !important;
-    padding: 30px 0 !important;
-    margin: 0 !important;
-}
-
-.a4-page {
-    width: 210mm !important;
-    min-height: 297mm !important;
-    padding: 25mm 20mm 25mm 20mm !important;
-    margin: 35px auto !important;
-    background: #FFFFFF !important;
-    border: 1.5px solid #1A3A6B !important;
-    box-shadow: 0 8px 24px rgba(26, 58, 107, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    position: relative !important;
-    box-sizing: border-box !important;
-}
-
-.a4-page-landscape {
-    width: 297mm !important;
-    min-height: 210mm !important;
-    padding: 20mm 20mm 25mm 20mm !important;
-    margin: 35px auto !important;
-    background: #FFFFFF !important;
-    border: 1.5px solid #1A3A6B !important;
-    box-shadow: 0 8px 24px rgba(26, 58, 107, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    position: relative !important;
-    box-sizing: border-box !important;
-}
-
-.a4-footer {
-    display: flex !important;
-    position: absolute !important;
-    bottom: 12mm !important;
-    left: 20mm !important;
-    right: 20mm !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    font-family: 'Times New Roman', Times, serif !important;
-    font-size: 0.85rem !important;
-    color: #1A3A6B !important;
-    border-top: 1.5px solid #1A3A6B !important;
-    padding-top: 8px !important;
-    font-weight: bold !important;
-}
-
-.page-break-banner {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 15px !important;
-    width: 100% !important;
-    max-width: 297mm !important;
-    margin: 40px auto !important;
-    padding: 10px 0 !important;
-}
-
-.page-break-line {
-    flex-grow: 1 !important;
-    height: 2px !important;
-    background: repeating-linear-gradient(90deg, #1A3A6B 0, #1A3A6B 8px, transparent 8px, transparent 14px) !important;
-}
-
-.page-break-badge {
-    font-family: 'Times New Roman', Times, serif !important;
-    font-size: 0.85rem !important;
-    font-weight: bold !important;
-    color: #1A3A6B !important;
-    background: #FFFFFF !important;
-    border: 1.5px solid #1A3A6B !important;
-    padding: 6px 16px !important;
-    letter-spacing: 0.08em !important;
-    text-transform: uppercase !important;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important;
-}
-
-@media screen and (max-width: 297mm) {
-    .a4-page, .a4-page-landscape {
-        width: 100% !important;
-        min-height: auto !important;
-        padding: 20px 16px !important;
-        margin: 20px 0 !important;
-    }
-}
-
-@media print {
-    body {
-        background: #FFFFFF !important;
-        padding: 0 !important;
-    }
-    .page-break-banner {
-        display: none !important;
-    }
-    .a4-page, .a4-page-landscape {
-        box-shadow: none !important;
-        border: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        page-break-after: always !important;
-        break-after: page !important;
-    }
-}
-
-
-/* ==========================================================================
-   UKURAN TINGGI (HEIGHT) KERTAS A4 UNIFORM & PRESISI 100%
-   ========================================================================== */
-.a4-page {
-    width: 210mm !important;
-    height: 297mm !important;
-    min-height: 297mm !important;
-    max-height: 297mm !important;
-    padding: 22mm 20mm 25mm 20mm !important;
-    margin: 35px auto !important;
-    background: #FFFFFF !important;
-    border: 1.5px solid #1A3A6B !important;
-    box-shadow: 0 8px 24px rgba(26, 58, 107, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    position: relative !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-}
-
-.a4-page-landscape {
-    width: 297mm !important;
-    height: 210mm !important;
-    min-height: 210mm !important;
-    max-height: 210mm !important;
-    padding: 18mm 20mm 25mm 20mm !important;
-    margin: 35px auto !important;
-    background: #FFFFFF !important;
-    border: 1.5px solid #1A3A6B !important;
-    box-shadow: 0 8px 24px rgba(26, 58, 107, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    position: relative !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-}
-
-.a4-page .section,
-.a4-page-landscape .section {
-    padding: 0 !important;
-    margin: 0 !important;
-    background: transparent !important;
-}
-
-@media screen and (max-width: 297mm) {
-    .a4-page {
-        width: 100% !important;
-        height: auto !important;
-        min-height: auto !important;
-        max-height: none !important;
-        overflow: visible !important;
-    }
-    .a4-page-landscape {
-        width: 100% !important;
-        height: auto !important;
-        min-height: auto !important;
-        max-height: none !important;
-        overflow: visible !important;
-    }
-}
-
-
-/* ==========================================================================
-   BALANCE TINGGI HALAMAN A4 UNIFORM & TERSEBAR PROPORSIONAL
-   ========================================================================== */
-.a4-page {
-    width: 210mm !important;
-    height: 297mm !important;
-    min-height: 297mm !important;
-    max-height: 297mm !important;
-    padding: 20mm 20mm 22mm 20mm !important;
-    margin: 35px auto !important;
-    background: #FFFFFF !important;
-    border: 1.5px solid #1A3A6B !important;
-    box-shadow: 0 8px 24px rgba(26, 58, 107, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    position: relative !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    overflow: hidden !important;
-}
-
-.a4-page-landscape {
-    width: 297mm !important;
-    height: 210mm !important;
-    min-height: 210mm !important;
-    max-height: 210mm !important;
-    padding: 16mm 20mm 22mm 20mm !important;
-    margin: 35px auto !important;
-    background: #FFFFFF !important;
-    border: 1.5px solid #1A3A6B !important;
-    box-shadow: 0 8px 24px rgba(26, 58, 107, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    position: relative !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    overflow: hidden !important;
-}
-
-.a4-content-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.a4-footer {
-    position: static !important;
-    margin-top: 15px !important;
-    padding-top: 8px !important;
-    border-top: 1.5px solid #1A3A6B !important;
+.signature-box {
+    padding-top: 65px;
+    border-top: 1px dashed #1A3A6B;
+    font-weight: bold;
+    color: #1A1A2E;
 }
