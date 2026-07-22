@@ -25,15 +25,15 @@
     --font-mono:        'Courier New', Courier, monospace;
 
     /* --- TYPOGRAPHY SCALE TOKENS (A4 SHEET 595x842 STANDARDS) --- */
-    --fs-cover-title:   2.2rem;   /* 35px — Main Cover Title */
-    --fs-cover-sub:     1.25rem;  /* 20px — Cover Subtitle */
-    --fs-h1-bab:        1.5rem;   /* 24px — H2 Bab Title */
-    --fs-h2-subbab:     1.15rem;  /* 18.4px — H3 Sub-Bab Title */
-    --fs-h3-card:       0.95rem;  /* 15.2px — H4 Component Title */
-    --fs-body-normal:   0.84rem;  /* 13.4px — Paragraph Body Text */
-    --fs-table-text:    0.68rem;  /* 10.8px — Table Cells & Headers (Dikecilin) */
-    --fs-diagram-text:  0.72rem;  /* 11.5px — Flowchart & Org Nodes */
-    --fs-badge-footer:  0.65rem;  /* 10.4px — Badges & Page Footers */
+    --fs-cover-title:   2.5rem;   /* 40px — Main Cover Title */
+    --fs-cover-sub:     1.35rem;  /* 21.6px — Cover Subtitle */
+    --fs-h1-bab:        1.65rem;  /* 26.4px — H2 Bab Title */
+    --fs-h2-subbab:     1.3rem;   /* 20.8px — H3 Sub-Bab Title */
+    --fs-h3-card:       1.1rem;   /* 17.6px — H4 Component Title */
+    --fs-body-normal:   0.98rem;  /* 15.7px — Paragraph Body Text (Diberatkan & Dibesarkan) */
+    --fs-table-text:    0.72rem;  /* 11.5px — Table Cells & Headers (Tabel Keuangan Tetap Rapat) */
+    --fs-diagram-text:  0.84rem;  /* 13.4px — Flowchart & Org Nodes */
+    --fs-badge-footer:  0.75rem;  /* 12px — Badges & Page Footers */
 
     --lh-title:         1.0;      /* Line height 1.0 */
     --lh-heading:       1.1;      /* Line height 1.1 */
@@ -3214,7 +3214,8 @@ body {
 .pdf-a4-sheet-landscape p,
 .pdf-a4-sheet .summary-paragraph,
 .pdf-a4-sheet .article-paragraph {
-    line-height: 1.15 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.45 !important;
 }
 
 .pdf-a4-sheet .proposal-table,
@@ -3222,10 +3223,14 @@ body {
 .pdf-a4-sheet .proposal-table th,
 .pdf-a4-sheet .proposal-table td,
 .pdf-a4-sheet-landscape .proposal-table th,
-.pdf-a4-sheet-landscape .proposal-table td {
-    font-size: 0.68rem !important;
-    line-height: 1.1 !important;
-    padding: 3px 5px !important;
+.pdf-a4-sheet-landscape .proposal-table td,
+.proposal-table th,
+.proposal-table td,
+.integration-table th,
+.integration-table td {
+    font-size: 0.72rem !important;
+    line-height: 1.25 !important;
+    padding: 5px 8px !important;
 }
 
 .pdf-a4-sheet .components-grid,
