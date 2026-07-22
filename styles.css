@@ -3028,11 +3028,13 @@ p, .article-paragraph, .summary-paragraph {
     line-height: 1.48 !important;
 }
 
+.pdf-a4-sheet.proposal-cover-page,
 .proposal-cover-page {
     background: #FFFFFF !important;
     border: none !important;
     box-shadow: none !important;
-    padding: 50px 40px 40px 40px !important;
+    outline: none !important;
+    padding: 40px 40px 30px 40px !important;
     margin: 0 auto !important;
     width: 842px !important;
     min-width: 842px !important;
