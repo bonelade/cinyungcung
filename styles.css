@@ -367,12 +367,11 @@ em {
    ========================================================================== */
 .section {
     background-color: var(--bg-paper);
-    max-width: var(--max-width);
+    max-width: 100% !important;
+    width: 100% !important;
     margin: 0 auto;
-    padding: 50px 0;
-    border-left: 1px solid var(--color-border);
-    border-right: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    padding: 20px 0 !important;
+    border: none !important;
 }
 
 .alt-bg {
@@ -426,12 +425,11 @@ em {
    ========================================================================== */
 .hero-section {
     background-color: var(--bg-paper);
-    max-width: var(--max-width);
+    max-width: 100% !important;
+    width: 100% !important;
     margin: 0 auto;
-    padding: 50px 0;
-    border-left: 1px solid var(--color-border);
-    border-right: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    padding: 20px 0 !important;
+    border: none !important;
 }
 
 .newspaper-row {
