@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let capexChartInstance = null;
     let financialChartInstance = null;
 
+    // PDF Download Button Handler
+    const navPdfBtn = document.getElementById('nav-download-pdf');
+    if (navPdfBtn) {
+        navPdfBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.print();
+        });
+    }
+
     // 1. Mobile Menu Toggle
     if (navToggle && navLinksContainer) {
         navToggle.addEventListener('click', () => {
@@ -58,7 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
             if (window.pageYOffset >= (sectionTop - 150)) {
-                current = section.getAttribute('id');
+                const sId = section.getAttribute('id');
+                if (sId) {
+                    current = sId;
+                }
             }
         });
 
