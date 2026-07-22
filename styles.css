@@ -3030,14 +3030,15 @@ p, .article-paragraph, .summary-paragraph {
 
 .proposal-cover-page {
     background: #FFFFFF !important;
-    border: 5px double #1A3A6B !important;
-    padding: 80px 60px 60px 60px !important;
-    margin: 0 auto 30px auto !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 50px 40px 40px 40px !important;
+    margin: 0 auto !important;
     width: 842px !important;
     min-width: 842px !important;
     max-width: 842px !important;
-    height: 842px !important;
-    min-height: 842px !important;
+    height: auto !important;
+    min-height: 0 !important;
     box-sizing: border-box !important;
     text-align: center !important;
     display: flex !important;
