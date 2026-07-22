@@ -23,7 +23,6 @@
                 <a href="#components">Bab II</a>
                 <a href="#facilities">Bab III</a>
                 <a href="#circular">Bab IV</a>
-                <a href="#calculator">Simulator</a>
                 <a href="#investment">Bab V</a>
                 <a href="#pemasaran">Bab VI</a>
                 <a href="#rekomendasi">Strategi</a>
@@ -148,7 +147,6 @@
                     <a class="toc-entry" href="#components"><span class="toc-chapter">Bab II</span><span class="toc-label">Komponen Program (11 Sentra)</span><span class="toc-dots"></span><span class="toc-ref">11</span></a>
                     <a class="toc-entry" href="#facilities"><span class="toc-chapter">Bab III</span><span class="toc-label">Kebutuhan Sarana dan Prasarana</span><span class="toc-dots"></span><span class="toc-ref">15</span></a>
                     <a class="toc-entry" href="#circular"><span class="toc-chapter">Bab IV</span><span class="toc-label">Jaring Ekonomi Sirkular &amp; Neraca Massa</span><span class="toc-dots"></span><span class="toc-ref">16</span></a>
-                    <a class="toc-entry" href="#calculator"><span class="toc-chapter">Simulator</span><span class="toc-label">Simulator Finansial</span><span class="toc-dots"></span><span class="toc-ref">20</span></a>
                     <a class="toc-entry" href="#investment"><span class="toc-chapter">Bab V</span><span class="toc-label">Rencana Keuangan, Investasi &amp; Anggaran (RAB)</span><span class="toc-dots"></span><span class="toc-ref">21</span></a>
                     <a class="toc-entry" href="#pemasaran"><span class="toc-chapter">Bab VI</span><span class="toc-label">Strategi Pemasaran &amp; Penjualan</span><span class="toc-dots"></span><span class="toc-ref">35</span></a>
                     <a class="toc-entry" href="#rekomendasi"><span class="toc-chapter">Strategi</span><span class="toc-label">Saran &amp; Analisis Strategis</span><span class="toc-dots"></span><span class="toc-ref">36</span></a>
@@ -1655,111 +1653,7 @@
     </div>
     <div class="pdf-page-gap"></div>
 
-        <div class="pdf-a4-sheet pdf-a4-sheet-landscape">
-        <div class="pdf-a4-body">
-            <section class="section alt-bg" id="calculator">
-            <div class="container">
-                <div class="section-header">
-                    <span class="sub-title">Simulator</span>
-                    <h2 class="section-title">Simulator Finansial</h2>
-                    <p class="section-desc">Geser parameter untuk memproyeksikan CAPEX, pendapatan, opex, laba, dan payback kawasan secara langsung.</p>
-                </div>
 
-                <div class="simulator-layout">
-                    <!-- Control Panel (Sliders) -->
-                    <div class="sim-panel">
-                        <h3 class="panel-title">Parameter Operasional</h3>
-                        
-                        <div class="slider-group">
-                            <div class="slider-header">
-                                <label for="slide-chickens">Populasi Ayam Petelur</label>
-                                <span class="slider-value" id="val-chickens">30.000</span>
-                            </div>
-                            <input type="range" id="slide-chickens" min="5000" max="60000" step="5000" value="30000" aria-label="Populasi Ayam Petelur">
-                            <span class="slider-desc">Kapasitas kandang closed-house (maks. 60.000 ekor)</span>
-                        </div>
-
-                        <div class="slider-group">
-                            <div class="slider-header">
-                                <label for="slide-fish">Populasi Ikan Nila / Siklus</label>
-                                <span class="slider-value" id="val-fish">75.000</span>
-                            </div>
-                            <input type="range" id="slide-fish" min="10000" max="150000" step="5000" value="75000" aria-label="Populasi Ikan Nila per Siklus">
-                            <span class="slider-desc">Jumlah tebar benih di 8 kolam sirkulasi RAS</span>
-                        </div>
-
-                        <div class="slider-group">
-                            <div class="slider-header">
-                                <label for="slide-egg-price">Harga Jual Telur / Kg</label>
-                                <span class="slider-value" id="val-egg-price">Rp 25.000</span>
-                            </div>
-                            <input type="range" id="slide-egg-price" min="20000" max="35000" step="500" value="25000" aria-label="Harga Jual Telur per Kilogram">
-                            <span class="slider-desc">Asumsi harga jual grosir komersial tingkat agen</span>
-                        </div>
-
-                        <div class="slider-group">
-                            <div class="slider-header">
-                                <label for="slide-fish-price">Harga Jual Ikan Nila / Kg</label>
-                                <span class="slider-value" id="val-fish-price">Rp 25.000</span>
-                            </div>
-                            <input type="range" id="slide-fish-price" min="20000" max="35000" step="500" value="25000" aria-label="Harga Jual Ikan Nila per Kilogram">
-                            <span class="slider-desc">Harga ikan nila segar tingkat konsumen/resto</span>
-                        </div>
-                    </div>
-
-                    <!-- Results Panel -->
-                    <div class="sim-panel results-panel">
-                        <h3 class="panel-title">Proyeksi Hasil Finansial</h3>
-                        
-                        <div class="metric-card">
-                            <span class="metric-label">Total Investasi Awal (CAPEX)</span>
-                            <span class="metric-value text-accent" id="res-investment">Rp 8.290.250.000</span>
-                        </div>
-
-                        <div class="metric-grid">
-                            <div class="metric-card">
-                                <span class="metric-label">Omzet Tahunan</span>
-                                <span class="metric-value" id="res-revenue">Rp 16.335.367.647</span>
-                            </div>
-                            <div class="metric-card">
-                                <span class="metric-label">OPEX Tahunan</span>
-                                <span class="metric-value" id="res-opex">Rp 9.545.335.000</span>
-                            </div>
-                        </div>
-
-                        <div class="metric-card highlight">
-                            <span class="metric-label">Estimasi Laba Bersih / Tahun</span>
-                            <span class="metric-value text-success" id="res-profit">Rp 6.790.032.647</span>
-                        </div>
-
-                        <div class="metric-card">
-                            <span class="metric-label">Payback Period (Waktu Balik Modal)</span>
-                            <span class="metric-value" id="res-payback">1,2 Tahun</span>
-                        </div>
-                        
-                        <div style="margin-top: 15px; font-size: 0.88rem; color: var(--color-ink-muted); line-height: 1.5; border-top: 1px solid var(--color-border-light); padding-top: 12px;">
-                            <span style="display:block; font-weight: 700; color: var(--color-accent); margin-bottom: 3px;">Dampak Sosial Desa Selawangi:</span>
-                            <p id="res-micro-impact" style="margin:0 0 8px 0;"></p>
-                            <span style="display:block; font-weight: 700; color: var(--color-accent-gold); margin-bottom: 3px;">Dana Reinvestasi Wilayah Tertinggal:</span>
-                            <p id="res-realloc-fund" style="margin:0; font-weight:600; color: var(--color-ink);"></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Live Chart in Simulator -->
-                <div class="sim-panel" style="margin-top: 20px;">
-                    <h3 class="panel-title">Proyeksi Kelayakan &amp; Akumulasi Kas (10 Tahun)</h3>
-                    <div class="chart-wrap" style="height: 320px;"><canvas id="cashFlowChart"></canvas></div>
-                </div>
-            </div>
-        </section>
-        </div>
-        <div class="pdf-a4-footer">
-            <span>Dokumen Proposal Cinyungcung 2026 &middot; Simulator Finansial Interaktif</span>
-            <span>Halaman 20 (Landscape)</span>
-        </div>
-    </div>
-    <div class="pdf-page-gap"></div>
 
         <div class="pdf-a4-sheet pdf-a4-sheet-landscape">
         <div class="pdf-a4-body">
