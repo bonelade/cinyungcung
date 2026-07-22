@@ -3029,16 +3029,17 @@ p, .article-paragraph, .summary-paragraph {
 }
 
 .proposal-cover-page {
-    background: #FFFFFF;
-    border: 4px double #1A3A6B;
-    padding: 60px 45px 50px 45px;
-    margin: 0 auto 30px auto;
-    width: 595px !important;
-    max-width: 100% !important;
+    background: #FFFFFF !important;
+    border: 5px double #1A3A6B !important;
+    padding: 80px 60px 60px 60px !important;
+    margin: 0 auto 30px auto !important;
+    width: 842px !important;
+    min-width: 842px !important;
+    max-width: 842px !important;
     height: 842px !important;
     min-height: 842px !important;
     box-sizing: border-box !important;
-    text-align: center;
+    text-align: center !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -3408,8 +3409,23 @@ body {
         background: #FFFFFF !important;
         padding: 0 !important;
     }
-    .pdf-page-gap {
+    header, nav, .top-nav, .header, #pdf-overlay, .pdf-page-gap {
         display: none !important;
+    }
+    .proposal-cover-page {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        box-sizing: border-box !important;
+        border: 5px double #1A3A6B !important;
+        margin: 0 !important;
+        padding: 80px 50px 60px 50px !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
     }
     .pdf-a4-sheet, .pdf-a4-sheet-landscape {
         box-shadow: none !important;
