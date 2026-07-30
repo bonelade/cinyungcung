@@ -132,41 +132,56 @@
     <div class="pdf-a4-sheet pdf-a4-sheet-landscape" style="margin: 0 auto; background: #FFFFFF; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 30px 40px;">
         <div class="pdf-a4-body">
 
-            <!-- KPI BOX RINGKASAN MODAL AWAL YANG HARUS DISIAPKAN -->
-            <div class="kpi-badge-box" style="margin-bottom: 20px; background: #FFFFFF; border: 2px solid #1A3A6B; border-radius: 8px; padding: 16px;">
-                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E2E8F0; padding-bottom: 8px; margin-bottom: 12px;">
+            <!-- KPI BOX RINGKASAN PARAMETER KEUNGAN & MODAL AWAL -->
+            <div class="kpi-badge-box" style="margin-bottom: 20px; background: #F8FAFC; border: 2px solid #1A3A6B; border-left: 6px solid #1A3A6B; border-radius: 8px; padding: 16px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #CBD5E0; padding-bottom: 8px; margin-bottom: 12px;">
                     <h3 style="margin: 0; font-size: 1.05rem; color: #1A3A6B; font-weight: 800;">
-                        📌 METRIKS KEBUTUHAN UANG AWAL YANG HARUS DISIAPKAN (INITIAL CAPITAL REQUIREMENT AT DAY 0)
+                        📌 Ringkasan Parameter Keuangan Utama &amp; Kebutuhan Uang Awal Disiapkan (Initial Capital Day 0):
                     </h3>
-                    <span style="background: #1A3A6B; color: #FFFFFF; padding: 3px 10px; border-radius: 4px; font-size: 0.72rem; font-weight: bold;">TOTAL KOMITMEN MODAL</span>
+                    <span style="background: #1A3A6B; color: #FFFFFF; padding: 3px 10px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">PROYEKSI RESMI 2026</span>
                 </div>
 
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px;">
-                    <!-- CAPEX FISIK -->
-                    <div style="background: #F8FAFC; border: 1px solid #CBD5E0; border-top: 4px solid #1A3A6B; border-radius: 6px; padding: 12px;">
-                        <span style="font-size: 0.72rem; color: #4A5568; font-weight: bold; display: block; margin-bottom: 4px;">1. MODAL INVESTASI FISIK (CAPEX)</span>
-                        <div style="font-size: 1.25rem; font-weight: 800; color: #1A3A6B; font-family: 'Times New Roman', serif;">Rp 15.890.000.000</div>
-                        <span style="font-size: 0.68rem; color: #718096;">12 Sentra Terpadu + Server AI HGX H100</span>
+                <!-- GRID 5 KARTU PARAMETER UTAMA -->
+                <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 12px; text-align: center;">
+                    <div style="background: #FFFFFF; padding: 10px 8px; border-radius: 6px; border: 1px solid #CBD5E0; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                        <span style="font-size: 0.68rem; color: #4A5568; font-weight: 700; display: block; margin-bottom: 3px;">Total CAPEX Moduler</span>
+                        <strong style="font-size: 0.88rem; color: #1A3A6B; display: block;">Rp 15.890.000.000</strong>
+                        <span style="font-size: 0.62rem; color: #718096;">12 Sektor &amp; AI Server</span>
                     </div>
 
-                    <!-- MODAL KERJA 4 BULAN -->
-                    <div style="background: #F8FAFC; border: 1px solid #CBD5E0; border-top: 4px solid #2E5A44; border-radius: 6px; padding: 12px;">
-                        <span style="font-size: 0.72rem; color: #4A5568; font-weight: bold; display: block; margin-bottom: 4px;">2. MODAL KERJA 4 BULAN (WORKING CAPITAL)</span>
-                        <div style="font-size: 1.25rem; font-weight: 800; color: #2E5A44; font-family: 'Times New Roman', serif;">Rp 3.394.463.333</div>
-                        <span style="font-size: 0.68rem; color: #718096;">Biaya Pakan &amp; Gaji s/d Kemandirian Kas (Bln-4)</span>
+                    <div style="background: #FFFFFF; padding: 10px 8px; border-radius: 6px; border: 1px solid #CBD5E0; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                        <span style="font-size: 0.68rem; color: #4A5568; font-weight: 700; display: block; margin-bottom: 3px;">OPEX Sirkular (Thn-1)</span>
+                        <strong style="font-size: 0.88rem; color: #2E5A44; display: block;">Rp 10.183.390.000</strong>
+                        <span style="font-size: 0.62rem; color: #718096;">Rp 848,6 Juta / Bulan</span>
                     </div>
 
-                    <!-- CONTINGENCY BUFFER -->
-                    <div style="background: #F8FAFC; border: 1px solid #CBD5E0; border-top: 4px solid #D4AF37; border-radius: 6px; padding: 12px;">
-                        <span style="font-size: 0.72rem; color: #4A5568; font-weight: bold; display: block; margin-bottom: 4px;">3. CADANGAN DARURAT (CONTINGENCY 2.5%)</span>
-                        <div style="font-size: 1.25rem; font-weight: 800; color: #744210; font-family: 'Times New Roman', serif;">Rp 397.250.000</div>
-                        <span style="font-size: 0.68rem; color: #718096;">Buffer Mitigasi Harga Raw Material &amp; Cuaca</span>
+                    <div style="background: #FFFFFF; padding: 10px 8px; border-radius: 6px; border: 1px solid #CBD5E0; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                        <span style="font-size: 0.68rem; color: #4A5568; font-weight: 700; display: block; margin-bottom: 3px;">Modal Kerja (4 Bln)</span>
+                        <strong style="font-size: 0.88rem; color: #B8860B; display: block;">Rp 3.394.463.333</strong>
+                        <span style="font-size: 0.62rem; color: #718096;">Buffer OPEX Ramp-Up</span>
+                    </div>
+
+                    <div style="background: #FFFFFF; padding: 10px 8px; border-radius: 6px; border: 1px solid #CBD5E0; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                        <span style="font-size: 0.68rem; color: #4A5568; font-weight: 700; display: block; margin-bottom: 3px;">Cadangan Kontingensi</span>
+                        <strong style="font-size: 0.88rem; color: #744210; display: block;">Rp 397.250.000</strong>
+                        <span style="font-size: 0.62rem; color: #718096;">Buffer Darurat 2.5%</span>
+                    </div>
+
+                    <div style="background: #FFFFFF; padding: 10px 8px; border-radius: 6px; border: 1px solid #CBD5E0; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                        <span style="font-size: 0.68rem; color: #4A5568; font-weight: 700; display: block; margin-bottom: 3px;">Kemandirian Kas</span>
+                        <strong style="font-size: 0.88rem; color: #1A3A6B; display: block;">Bulan Ke-4</strong>
+                        <span style="font-size: 0.62rem; color: #718096;">Hari Ke-120 Operasional</span>
                     </div>
                 </div>
 
+                <!-- BANNER UTAMA TOTAL UANG AWAL -->
                 <div style="background: #1A3A6B; color: #FFFFFF; border-radius: 6px; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-size: 0.85rem; font-weight: bold;">TOTAL UANG AWAL LENGKAP YANG HARUS DISIAPKAN (SAFE COMMITMENT):</span>
-                    <span style="font-size: 1.2rem; font-weight: 800; color: #FFD700; font-family: 'Times New Roman', serif;">Rp 19.681.713.333 (~19,68 MILIAR RUPIAH)</span>
+                    <span style="font-size: 0.84rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.3px;">
+                        👉 Total Uang Awal Lengkap yang Harus Disiapkan (Safe Upfront Commitment):
+                    </span>
+                    <span style="font-size: 1.18rem; font-weight: 800; color: #FFD700; font-family: 'Times New Roman', serif;">
+                        Rp 19.681.713.333 (~19,68 MILIAR RUPIAH)
+                    </span>
                 </div>
             </div>
             
