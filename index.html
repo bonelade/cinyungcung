@@ -2026,70 +2026,88 @@ Berdasarkan neraca massa terintegrasi kawasan, input bahan baku mentah dikonvers
                             </tbody>
                         </table>
                     </div>
-                </div>
 
                 <!-- SECTION 5.5: METRIK KELAYAKAN FINANSIAL & FORMULA PERHITUNGAN LENGKAP -->
                 <div class="sim-panel" style="margin-bottom: 25px; border-top: 3px solid var(--color-rule);">
                     <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 1.25rem; color: var(--color-ink); margin-bottom: 12px; font-weight: bold; border-bottom: 2px solid var(--color-border-light); padding-bottom: 6px;">5.5 Evaluasi Metrik Kelayakan Finansial &amp; Detail Perhitungan Formal</h3>
                     
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 15px;">
+                    <p style="font-size: 0.84rem; color: var(--color-ink-muted); margin-bottom: 16px; line-height: 1.5;">
+                        Kalkulasi kelayakan investasi menggunakan 4 instrumen evaluasi keuangan utama (NPV, IRR, PBP/DPBP, B/C Ratio) serta analisis titik impas (BEP) dengan asumsi <em>Discount Rate (Suku Bunga Diskonto)</em> sebesar <strong>10,0% per tahun</strong>:
+                    </p>
+
+                    <!-- GRID 4 METRIK UTAMA -->
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 20px;">
+                        
                         <!-- METRIK 1: NPV -->
-                        <div style="background: #F7FAFC; border: 1px solid #E2E8F0; border-radius: 6px; padding: 12px;">
-                            <h4 style="font-size: 0.88rem; color: #1A3A6B; margin: 0 0 6px 0; font-weight: bold;">1. Net Present Value (NPV) &middot; Discount Rate 10%</h4>
-                            <p style="font-size: 0.76rem; color: #4A5568; margin-bottom: 6px; line-height: 1.4;">
-                                <strong>Rumus:</strong> \(\text{NPV} = \sum_{t=1}^{5} \frac{CF_t}{(1+k)^t} - \text{CAPEX}\)
-                            </p>
-                            <ul style="font-size: 0.74rem; color: #2D3748; padding-left: 16px; margin: 0; line-height: 1.4;">
-                                <li>\(\text{PV Arus Kas Masuk (5 Thn)}\) = Rp 49.693.915.873</li>
-                                <li>\(\text{Initial CAPEX Investasi}\) = Rp 15.890.000.000</li>
-                                <li><strong>\(\text{NPV Bersih}\) = Rp 33.803.915.873 (NPV &gt; 0 &rarr; Sangat Feasible)</strong></li>
+                        <div style="background: #F8FAFC; border: 1px solid #CBD5E0; border-left: 4px solid #1A3A6B; border-radius: 6px; padding: 14px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <h4 style="font-size: 0.92rem; color: #1A3A6B; margin: 0; font-weight: 800;">1. Net Present Value (NPV @ 10%)</h4>
+                                <span style="background: #EBF8FF; color: #2B6CB0; padding: 2px 8px; border-radius: 4px; font-size: 0.68rem; font-weight: 700;">METRIK UTAMA</span>
+                            </div>
+                            
+                            <!-- FORMULA DISPLAY BOX -->
+                            <div style="background: #EDF2F7; border-radius: 4px; padding: 8px 12px; margin-bottom: 10px; font-family: 'Courier New', monospace; font-size: 0.78rem; color: #2D3748; text-align: center; font-weight: bold;">
+                                NPV = &sum;<sub>t=1</sub><sup>5</sup> [ CF<sub>t</sub> &divide; (1 + k)<sup>t</sup> ] &minus; Initial CAPEX
+                            </div>
+                            
+                            <ul style="font-size: 0.76rem; color: #2D3748; padding-left: 16px; margin: 0 0 10px 0; line-height: 1.5;">
+                                <li><strong>PV Arus Kas Masuk (5 Thn)</strong> = Rp 49.693.915.873</li>
+                                <li><strong>Initial CAPEX Investasi Awal</strong> = Rp 15.890.000.000</li>
+                                <li><strong>Net Present Value (NPV Bersih)</strong> = <span style="color: #2E5A44; font-weight: 800; font-size: 0.85rem;">+Rp 33.803.915.873</span></li>
                             </ul>
+                            
+                            <div style="background: rgba(46, 90, 68, 0.1); border-radius: 4px; padding: 6px 10px; font-size: 0.72rem; color: #2E5A44; font-weight: 700;">
+                                &check; Kriteria: NPV &gt; 0 &rarr; Proyek Sangat Layak (Feasible &amp; Highly Profitable)
+                            </div>
                         </div>
 
                         <!-- METRIK 2: IRR -->
-                        <div style="background: #F7FAFC; border: 1px solid #E2E8F0; border-radius: 6px; padding: 12px;">
-                            <h4 style="font-size: 0.88rem; color: #1A3A6B; margin: 0 0 6px 0; font-weight: bold;">2. Internal Rate of Return (IRR)</h4>
-                            <p style="font-size: 0.76rem; color: #4A5568; margin-bottom: 6px; line-height: 1.4;">
-                                <strong>Rumus:</strong> Discount Rate \(r\) di mana \(\text{NPV}(r) = 0\)
-                            </p>
-                            <ul style="font-size: 0.74rem; color: #2D3748; padding-left: 16px; margin: 0; line-height: 1.4;">
-                                <li>Hurdle Rate / Suku Bunga Acuan = 10,0%</li>
-                                <li><strong>\(\text{Hasil IRR Kawasan}\) = 64,82% per Tahun</strong></li>
-                                <li><em>Keterangan: IRR (64,82%) &gt;&gt; Hurdle Rate (10,0%), sangat aman dari fluktuasi bunga.</em></li>
+                        <div style="background: #F8FAFC; border: 1px solid #CBD5E0; border-left: 4px solid #2E5A44; border-radius: 6px; padding: 14px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <h4 style="font-size: 0.92rem; color: #2E5A44; margin: 0; font-weight: 800;">2. Internal Rate of Return (IRR)</h4>
+                                <span style="background: #F0FFF4; color: #276749; padding: 2px 8px; border-radius: 4px; font-size: 0.68rem; font-weight: 700;">TINGKAT PENGEMBALIAN</span>
+                            </div>
+                            
+                            <!-- FORMULA DISPLAY BOX -->
+                            <div style="background: #EDF2F7; border-radius: 4px; padding: 8px 12px; margin-bottom: 10px; font-family: 'Courier New', monospace; font-size: 0.78rem; color: #2D3748; text-align: center; font-weight: bold;">
+                                &sum;<sub>t=1</sub><sup>5</sup> [ CF<sub>t</sub> &divide; (1 + IRR)<sup>t</sup> ] &minus; CAPEX = 0
+                            </div>
+                            
+                            <ul style="font-size: 0.76rem; color: #2D3748; padding-left: 16px; margin: 0 0 10px 0; line-height: 1.5;">
+                                <li><strong>Hurdle Rate / Suku Bunga Acuan (k)</strong> = 10,0% per Tahun</li>
+                                <li><strong>Hasil IRR Kawasan Cinyungcung</strong> = <span style="color: #2E5A44; font-weight: 800; font-size: 0.85rem;">64,82% per Tahun</span></li>
+                                <li><strong>Margin Keamanan Risiko (Spread)</strong> = +54,82% di atas Hurdle Rate</li>
                             </ul>
+                            
+                            <div style="background: rgba(46, 90, 68, 0.1); border-radius: 4px; padding: 6px 10px; font-size: 0.72rem; color: #2E5A44; font-weight: 700;">
+                                &check; Kriteria: IRR (64,82%) &gt;&gt; Discount Rate (10,0%) &rarr; Sangat Aman dari Gejolak Bunga
+                            </div>
                         </div>
 
                         <!-- METRIK 3: PAYBACK PERIOD -->
-                        <div style="background: #F7FAFC; border: 1px solid #E2E8F0; border-radius: 6px; padding: 12px;">
-                            <h4 style="font-size: 0.88rem; color: #1A3A6B; margin: 0 0 6px 0; font-weight: bold;">3. Payback Period (PBP) &amp; Discounted PBP</h4>
-                            <p style="font-size: 0.76rem; color: #4A5568; margin-bottom: 6px; line-height: 1.4;">
-                                <strong>Rumus:</strong> \(\text{PBP} = T_1 + \frac{\text{CAPEX} - \text{CF}_1}{\text{CF}_2}\)
-                            </p>
-                            <ul style="font-size: 0.74rem; color: #2D3748; padding-left: 16px; margin: 0; line-height: 1.4;">
-                                <li><strong>Payback Period Normal (PBP) = 1,39 Tahun (~16,7 Bulan)</strong></li>
-                                <li><strong>Discounted Payback Period (DPBP @10%) = 1,57 Tahun (~18,8 Bulan)</strong></li>
-                                <li><em>Seluruh modal awal kembali penuh dalam kurun waktu &lt; 1,6 Tahun.</em></li>
+                        <div style="background: #F8FAFC; border: 1px solid #CBD5E0; border-left: 4px solid #D4AF37; border-radius: 6px; padding: 14px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <h4 style="font-size: 0.92rem; color: #744210; margin: 0; font-weight: 800;">3. Payback Period (PBP &amp; DPBP)</h4>
+                                <span style="background: #FEFCBF; color: #744210; padding: 2px 8px; border-radius: 4px; font-size: 0.68rem; font-weight: 700;">PENGEMBALIAN MODAL</span>
+                            </div>
+                            
+                            <!-- FORMULA DISPLAY BOX -->
+                            <div style="background: #EDF2F7; border-radius: 4px; padding: 8px 12px; margin-bottom: 10px; font-family: 'Courier New', monospace; font-size: 0.78rem; color: #2D3748; text-align: center; font-weight: bold;">
+                                PBP = Tahun<sub>1</sub> + [ (CAPEX &minus; CF<sub>1</sub>) &divide; CF<sub>2</sub> ]
+                            </div>
+                            
+                            <ul style="font-size: 0.76rem; color: #2D3748; padding-left: 16px; margin: 0 0 10px 0; line-height: 1.5;">
+                                <li><strong>Payback Period Normal (PBP)</strong> = <span style="color: #744210; font-weight: 800;">1,39 Tahun (~16,7 Bulan)</span></li>
+                                <li><strong>Discounted Payback Period (DPBP @10%)</strong> = <span style="color: #744210; font-weight: 800;">1,57 Tahun (~18,8 Bulan)</span></li>
+                                <li><strong>Modal Tercover Penuh</strong> = Bulan Ke-17 Operasional</li>
                             </ul>
+                            
+                            <div style="background: rgba(212, 175, 55, 0.15); border-radius: 4px; padding: 6px 10px; font-size: 0.72rem; color: #744210; font-weight: 700;">
+                                &check; Kriteria: PBP &lt; 2,0 Tahun &rarr; Pengembalian Modal Investasi Sangat Cepat
+                            </div>
                         </div>
 
                         <!-- METRIK 4: B/C RATIO & BEP -->
-                        <div style="background: #F7FAFC; border: 1px solid #E2E8F0; border-radius: 6px; padding: 12px;">
-                            <h4 style="font-size: 0.88rem; color: #1A3A6B; margin: 0 0 6px 0; font-weight: bold;">4. Benefit-Cost Ratio (B/C) &amp; Break-Even Point (BEP)</h4>
-                            <p style="font-size: 0.76rem; color: #4A5568; margin-bottom: 6px; line-height: 1.4;">
-                                <strong>Rumus B/C:</strong> \(\frac{\text{Total PV Benefits}}{\text{Initial CAPEX}}\) &middot; <strong>BEP:</strong> \(\frac{\text{FC}}{1 - (\text{VC}/\text{Rev})}\)
-                            </p>
-                            <ul style="font-size: 0.74rem; color: #2D3748; padding-left: 16px; margin: 0; line-height: 1.4;">
-                                <li><strong>Benefit-Cost Ratio (B/C) = 3,13</strong> (B/C &gt; 1,0 &rarr; Sangat Menguntungkan)</li>
-                                <li><strong>BEP Sales Rupiah = Rp 4.692.000.000 / Tahun</strong></li>
-                                <li><strong>BEP Volume Telur = 2.165.730 Butir/Thn</strong> (Hanya ~21,9% kapasitas)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SECTION 5.6: ANALISIS SENSITIVITAS & STRESS TEST RISIKO -->
-                <div class="sim-panel" style="margin-bottom: 25px; border-top: 3px solid var(--color-rule);">
-                    <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 1.25rem; color: var(--color-ink); margin-bottom: 12px; font-weight: bold; border-bottom: 2px solid var(--color-border-light); padding-bottom: 6px;">5.6 Matriks Stress Testing Riset Sensitivitas (3 Skenario Ekonomi)</h3>
                     <p style="font-size: 0.88rem; color: var(--color-ink-muted); margin-bottom: 14px; line-height: 1.5;">
                         Pengujian ketahanan finansial dilakukan terhadap 3 skenario risiko makro ekonomi untuk menguji resiliensi investasi kawasan:
                     </p>
