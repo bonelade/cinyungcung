@@ -7,11 +7,12 @@ async function runAutoFixOrchestrator() {
     console.log("==========================================================================");
     console.log("🤖 MASTER AUTO-REVISI & AUTO-FIX MULTI-AGENT ORCHESTRATOR SYSTEM 🤖");
     console.log("==========================================================================");
-    console.log("Sistem memindai 10 Sub-Agent Auditor & mengeksekusi Auto-Revisi Otomatis...\n");
+    console.log("Sistem memindai Sub-Agent Auditor & mengeksekusi Auto-Revisi Otomatis...\n");
 
     const fixers = [
         { id: "FIX-01", name: "Financial Model & DCF Auto-Fixer", script: "fix_financial.js" },
-        { id: "FIX-02", name: "Visual Design & Contrast Auto-Fixer", script: "fix_design.js" }
+        { id: "FIX-02", name: "Visual Design & Contrast Auto-Fixer", script: "fix_design.js" },
+        { id: "FIX-03", name: "Viewport & Device Responsive Auto-Fixer", script: "fix_viewport.js" }
     ];
 
     let fixResults = [];

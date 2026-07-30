@@ -3641,5 +3641,55 @@ body {
         break-before: auto !important;
         height: auto !important;
         overflow: visible !important;
+}
+
+/* ==========================================================================
+   DEVICE RESPONSIVE VIEWPORT SCALING & FIXED 842PX LAYOUT LOCK MODULE
+   Mencegah Layout Berantakan di Seluruh Layar HP, Tablet, Laptop & Monitor
+   ========================================================================== */
+.pdf-a4-sheet,
+.pdf-a4-sheet-landscape {
+    width: 842px !important;
+    min-width: 842px !important;
+    max-width: 842px !important;
+    margin: 0 auto 20px auto !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+.table-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 15px;
+}
+
+.proposal-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    table-layout: auto !important;
+}
+
+@media screen and (max-width: 890px) {
+    body {
+        overflow-x: auto !important;
+        padding: 10px 5px !important;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .nav-header {
+        max-width: 842px !important;
+        width: 842px !important;
+        min-width: 842px !important;
+    }
+    
+    .pdf-a4-sheet,
+    .pdf-a4-sheet-landscape {
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
     }
 }
+
