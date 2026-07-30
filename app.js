@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Default detail text
         const defaultCenterHtml = `
-            <div class="web-center-default fade-in-content">
-                <h4>Pusat Jaring Sirkular</h4>
-                <p>Arahkan kursor ke salah satu kartu di sekeliling untuk melihat jaring hubungan timbal balik secara interaktif.</p>
+            <div class="web-center-default fade-in-content" style="text-align: center; padding: 14px 18px; background: #F8F9FC; border: 1px dashed #1A3A6B; border-radius: 4px;">
+                <h4 style="font-family: 'Times New Roman', Times, serif; font-size: 1.08rem; color: #1A3A6B; font-weight: bold; margin-bottom: 4px;">Pusat Jaring Sirkular &amp; Detail Hubungan Interaktif</h4>
+                <p style="font-size: 0.88rem; color: var(--color-ink-muted); margin: 0; line-height: 1.4;">Arahkan kursor ke salah satu dari 11 kartu di sekeliling papan untuk melihat jaring hubungan timbal balik dan alur transfer nutrisi secara interaktif.</p>
             </div>
         `;
 
@@ -374,17 +374,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Space Constellation Physics Engine
         const baseCenters = {
-            'node-chickens':  { cx: 450, cy: 50 },
-            'node-jamur':     { cx: 660, cy: 80 },
-            'node-dapur':     { cx: 800, cy: 180 },
-            'node-nila':      { cx: 830, cy: 330 },
-            'node-maggot':    { cx: 740, cy: 470 },
-            'node-spirulina': { cx: 580, cy: 540 },
-            'node-deko':      { cx: 320, cy: 540 },
-            'node-koperasi':  { cx: 160, cy: 470 },
-            'node-pupuk':     { cx: 70,  cy: 330 },
-            'node-jagung':    { cx: 100, cy: 180 },
-            'node-energy':    { cx: 240, cy: 80 }
+            'node-chickens':  { cx: 450, cy: 75 },
+            'node-jamur':     { cx: 650, cy: 110 },
+            'node-dapur':     { cx: 786, cy: 206 },
+            'node-nila':      { cx: 816, cy: 332 },
+            'node-maggot':    { cx: 730, cy: 447 },
+            'node-spirulina': { cx: 554, cy: 516 },
+            'node-deko':      { cx: 346, cy: 516 },
+            'node-koperasi':  { cx: 170, cy: 447 },
+            'node-pupuk':     { cx: 84,  cy: 332 },
+            'node-jagung':    { cx: 114, cy: 206 },
+            'node-energy':    { cx: 250, cy: 110 }
         };
 
         const simulatedNodes = [];
@@ -426,8 +426,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         function getIntersection(node, dx, dy) {
-            const halfW = 90; // 180 / 2
-            const halfH = 36; // 72 / 2
+            const halfW = 70; // 140 / 2
+            const halfH = 26; // 52 / 2
             if (dx === 0 && dy === 0) return { x: node.x, y: node.y };
             const absDx = Math.abs(dx);
             const absDy = Math.abs(dy);
@@ -446,38 +446,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
             simulatedNodes.forEach(node => {
                 if (isHovered) {
-                    // Snap back to mathematically aligned duodecagon coordinates (slightly softer pull)
-                    const ax = (node.baseX - node.x) * 0.08;
-                    const ay = (node.baseY - node.y) * 0.08;
-                    node.vx = node.vx * 0.4 + ax;
-                    node.vy = node.vy * 0.4 + ay;
+                    // Snap back to mathematically aligned duodecagon coordinates
+                    const ax = (node.baseX - node.x) * 0.12;
+                    const ay = (node.baseY - node.y) * 0.12;
+                    node.vx = node.vx * 0.3 + ax;
+                    node.vy = node.vy * 0.3 + ay;
                 } else {
                     // Gentle floating space drift (random wandering)
-                    const driftX = Math.sin(time + node.index * 1.7) * 0.15;
-                    const driftY = Math.cos(time + node.index * 1.3) * 0.15;
+                    const driftX = Math.sin(time + node.index * 1.7) * 0.08;
+                    const driftY = Math.cos(time + node.index * 1.3) * 0.08;
                     node.vx += driftX;
                     node.vy += driftY;
 
                     // Mild spring pulling them back to their base constellation locations
-                    node.vx += (node.baseX - node.x) * 0.003;
-                    node.vy += (node.baseY - node.y) * 0.003;
+                    node.vx += (node.baseX - node.x) * 0.005;
+                    node.vy += (node.baseY - node.y) * 0.005;
                 }
 
-                // ALWAYS apply repulsion forces (Collision Avoidance) to prevent overlap!
+                // Collision Avoidance to prevent overlap
                 simulatedNodes.forEach(other => {
                     if (other !== node) {
                         const dx = other.x - node.x;
                         const dy = other.y - node.y;
-                        const minDistX = 220; // card width is 180 + margin
-                        const minDistY = 95;  // card height is 72 + margin
+                        const minDistX = 145; // card width (140) + margin
+                        const minDistY = 58;  // card height (52) + margin
 
                         if (Math.abs(dx) < minDistX && Math.abs(dy) < minDistY) {
                             const overlapX = minDistX - Math.abs(dx);
                             const overlapY = minDistY - Math.abs(dy);
 
-                            // Stronger push-apart force to ensure no overlaps
-                            const forceX = (dx > 0 ? -1 : 1) * overlapX * 0.06;
-                            const forceY = (dy > 0 ? -1 : 1) * overlapY * 0.06;
+                            const forceX = (dx > 0 ? -1 : 1) * overlapX * 0.04;
+                            const forceY = (dy > 0 ? -1 : 1) * overlapY * 0.04;
 
                             node.vx += forceX;
                             node.vy += forceY;
@@ -487,20 +486,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (!isHovered) {
                     // Dampen velocities
-                    node.vx *= 0.92;
-                    node.vy *= 0.92;
+                    node.vx *= 0.90;
+                    node.vy *= 0.90;
 
                     // Speed limit
                     const speed = Math.sqrt(node.vx * node.vx + node.vy * node.vy);
-                    const maxSpeed = 1.6;
+                    const maxSpeed = 1.2;
                     if (speed > maxSpeed) {
                         node.vx = (node.vx / speed) * maxSpeed;
                         node.vy = (node.vy / speed) * maxSpeed;
                     }
                 } else {
-                    // Dampen velocities when snapping to avoid jittering
-                    node.vx *= 0.75;
-                    node.vy *= 0.75;
+                    node.vx *= 0.65;
+                    node.vy *= 0.65;
                 }
 
                 // Apply velocities
@@ -508,14 +506,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 node.y += node.vy;
 
                 // Restrict bounds to canvas edges
-                if (node.x < 100) { node.x = 100; node.vx *= -0.5; }
-                if (node.x > 800) { node.x = 800; node.vx *= -0.5; }
-                if (node.y < 50) { node.y = 50; node.vy *= -0.5; }
-                if (node.y > 550) { node.y = 550; node.vy *= -0.5; }
+                if (node.x < 75) { node.x = 75; node.vx *= -0.5; }
+                if (node.x > 825) { node.x = 825; node.vx *= -0.5; }
+                if (node.y < 40) { node.y = 40; node.vy *= -0.5; }
+                if (node.y > 540) { node.y = 540; node.vy *= -0.5; }
 
                 // Write positions to elements style
-                const leftPercent = (node.x - 90) / 900 * 100;
-                const topPercent = (node.y - 36) / 600 * 100;
+                const leftPercent = (node.x - 70) / 900 * 100;
+                const topPercent = (node.y - 26) / 600 * 100;
                 node.el.style.left = `${leftPercent}%`;
                 node.el.style.top = `${topPercent}%`;
             });
@@ -566,41 +564,38 @@ document.addEventListener('DOMContentLoaded', () => {
         // ======================================
         // A. CAPEX (Capital Expenditure)
         // ======================================
-        // 1. Sentra Ayam: DOC 40K/ekor + Kandang (scaled) + Feeder sets + Gudang pakan + Gudang telur + Sortasi + Closed-House + IoT & Biosekuriti
+        // 1. Sentra Ayam: DOC 40K/ekor + Kandang + Conveyor + Silo + Gudang + Sortasi + Blower + Genset (Total: Rp 4.200.000.000)
         const capexDOC = chickens * 40000;
-        const unitsAyam = chickens / 5000;
-        const capexKandang = Math.round(unitsAyam * 158333333);
-        const capexFeeder = chickens * 3000;
-        const capexGudangPakan = 300000000;
-        const capexGudangTelur = 250000000;
-        const capexSortasi = 50000000;
-        const capexSilo = 360000000;
-        const capexVentilasi = Math.round(unitsAyam * 120000000);
-        const capexGenset = 220000000;
-        const capexAyam = capexDOC + capexKandang + capexFeeder + capexGudangPakan + capexGudangTelur + capexSortasi + capexSilo + capexVentilasi + capexGenset + 165000000;
+        const unitsAyam = chickens / 5000; // 6 unit kandang
+        const capexKandang = Math.round(unitsAyam * 250000000); // 1.500.000.000
+        const capexConveyor = Math.round(unitsAyam * 75000000); // 450.000.000
+        const capexSiloGudang = 350000000;
+        const capexSortasiMess = 170000000;
+        const capexBlowerCooling = Math.round(unitsAyam * 46666667); // 280.000.000
+        const capexGenset = 250000000;
+        const capexAyam = capexDOC + capexKandang + capexConveyor + capexSiloGudang + capexSortasiMess + capexBlowerCooling + capexGenset;
 
-        // 2. Perikanan Nila: Bibit + Kolam terpal + Aerator + Pakan starter + Peralatan + RAS + Mesin Pelet + Monitoring & Sertifikasi
+        // 2. Perikanan Nila: Bibit + Kolam D5 + Aerator + RAS + Mesin Pelet + Bak Transit (Total: Rp 750.000.000)
         const capexBibitNila = fish * 350;
-        const jumlahKolam = Math.ceil(fish / 10000);
-        const capexKolam = jumlahKolam * 8000000;
-        const capexAerator = jumlahKolam * 2500000;
-        const capexPakanStarter = 50000000;
-        const capexAlatPanen = 15000000;
-        const capexRAS = 120000000;
-        const capexPeletMesin = 80000000;
-        const capexNila = capexBibitNila + capexKolam + capexAerator + capexPakanStarter + capexAlatPanen + capexRAS + capexPeletMesin + 80000000;
+        const jumlahKolam = Math.ceil(fish / 4687.5); // 16 unit kolam
+        const capexKolam = jumlahKolam * 10000000; // 160.000.000
+        const capexAerator = Math.round(jumlahKolam * 5312500); // 85.000.000
+        const capexRAS = 220000000;
+        const capexPeletMesin = 120000000;
+        const capexPanenFiber = 112500000;
+        const capexNila = capexBibitNila + capexKolam + capexAerator + capexRAS + capexPeletMesin + capexPanenFiber;
 
-        // 3-12. Fixed infrastructure (not scaled by sliders)
-        const capexPupuk = 215000000;
-        const capexJagung = 95000000;
-        const capexMaggot = 120000000;
-        const capexSpirulina = 130000000;
-        const capexJamur = 120000000;
-        const capexKuliner = 240000000;
-        const capexKoperasi = 205000000;
-        const capexEnergi = 535000000;
-        const capexDeko = 105000000;
-        const capexInfra = 1765000000;
+        // 3-12. Sektor Sumpat & Infrastruktur Kawasan
+        const capexPupuk = 450000000;
+        const capexJagung = 250000000;
+        const capexMaggot = 250000000;
+        const capexSpirulina = 300000000;
+        const capexJamur = 250000000;
+        const capexKuliner = 450000000;
+        const capexKoperasi = 350000000;
+        const capexEnergi = 850000000;
+        const capexDeko = 200000000;
+        const capexInfra = 1950000000; // Termasuk Pusat R&D Kayu 2 Lt (1.25M) + Akses Paving K-400 (400M) + IT On-Premise (300M)
 
         const totalCapex = capexAyam + capexNila + capexPupuk + capexJagung + capexMaggot +
                            capexSpirulina + capexJamur + capexKuliner + capexKoperasi +
@@ -712,10 +707,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Helper: Update dynamic financial charts
     function updateCharts(totalCapex, netProfit, capexAyam, capexNila) {
-        const capexEnergi = 535000000;
-        const capexPupuk = 215000000;
-        const capexMaggotSpirulina = 120000000 + 130000000;
-        const capexOther = 95000000 + 120000000 + 240000000 + 205000000 + 105000000 + 1765000000;
+        const capexEnergi = 850000000;
+        const capexPupuk = 450000000;
+        const capexMaggotSpirulina = 250000000 + 300000000;
+        const capexOther = 250000000 + 250000000 + 450000000 + 350000000 + 200000000 + 1950000000;
 
         // 5-year cumulative cash flow projection
         const cashFlowData = [
