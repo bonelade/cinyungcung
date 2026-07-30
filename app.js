@@ -586,16 +586,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const capexNila = capexBibitNila + capexKolam + capexAerator + capexRAS + capexPeletMesin + capexPanenFiber;
 
         // 3-12. Sektor Sumpat & Infrastruktur Kawasan
-        const capexPupuk = 685200000;
-        const capexJagung = 385500000;
-        const capexMaggot = 275800000;
-        const capexSpirulina = 195400000;
-        const capexJamur = 278600000;
-        const capexKuliner = 1425800000;
-        const capexKoperasi = 248500000;
-        const capexEnergi = 2185700000;
-        const capexDeko = 428300000;
-        const capexInfra = 3615500000; // Pusat R&D Kayu 2 Lt + Gedung Serbaguna + Akses Jalan Paving K-400 & IT Cloud System
+        const capexPupuk = 450200000;
+        const capexJagung = 248500000;
+        const capexMaggot = 185600000;
+        const capexSpirulina = 125400000;
+        const capexJamur = 182300000;
+        const capexKuliner = 785600000;
+        const capexKoperasi = 168200000;
+        const capexEnergi = 1354800000;
+        const capexDeko = 285400000;
+        const capexInfra = 2610250000; // Pusat R&D Kayu 1 Lt + Gedung Serbaguna + Akses Jalan Paving K-400 & IT Cloud System
 
         const totalCapex = capexAyam + capexNila + capexPupuk + capexJagung + capexMaggot +
                            capexSpirulina + capexJamur + capexKuliner + capexKoperasi +
