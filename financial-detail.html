@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rincian Detail CAPEX & OPEX 12 Sektor - Kawasan Terpadu Cinyungcung</title>
+    <title>Rincian Detail Lengkap CAPEX & OPEX 12 Sektor - Kawasan Terpadu Cinyungcung</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -20,10 +20,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 20px;
+            padding: 14px 24px;
             background: #FFFFFF;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
             border-left: 5px solid #1A3A6B;
         }
         .nav-back-btn {
@@ -32,11 +32,11 @@
             gap: 8px;
             background: #1A3A6B;
             color: #FFFFFF;
-            padding: 8px 16px;
+            padding: 9px 18px;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
+            font-weight: 700;
+            font-size: 0.84rem;
             transition: all 0.2s ease;
         }
         .nav-back-btn:hover {
@@ -48,25 +48,42 @@
             color: #FFFFFF !important;
             font-weight: 700;
             text-transform: uppercase;
-            font-size: 0.70rem;
+            font-size: 0.69rem;
             letter-spacing: 0.5px;
+            padding: 8px 10px;
         }
         .sector-header-row {
-            background: rgba(26, 58, 107, 0.08) !important;
-            font-weight: 700;
+            background: rgba(26, 58, 107, 0.1) !important;
+            font-weight: 800;
             color: #1A3A6B;
             font-size: 0.82rem;
+            border-top: 2px solid #CBD5E0;
         }
         .subitem-row td {
             font-size: 0.72rem;
-            padding: 6px 10px;
+            padding: 6px 12px;
             border-bottom: 1px solid #E2E8F0;
+            color: #4A5568;
+        }
+        .subitem-row strong {
+            color: #2D3748;
         }
         .sector-total-row {
-            background: rgba(212, 175, 55, 0.12) !important;
-            font-weight: 700;
+            background: rgba(212, 175, 55, 0.15) !important;
+            font-weight: 800;
             color: #1A3A6B;
             font-size: 0.78rem;
+            border-bottom: 2px solid #CBD5E0;
+        }
+        .kpi-badge-box {
+            background: rgba(26, 58, 107, 0.04);
+            border-left: 4px solid #1A3A6B;
+            border-radius: 6px;
+            padding: 12px 18px;
+            margin-bottom: 20px;
+            font-size: 0.82rem;
+            line-height: 1.55;
+            color: #1A3A6B;
         }
     </style>
 </head>
@@ -75,7 +92,7 @@
     <!-- NAV HEADER -->
     <div class="nav-header">
         <div>
-            <h2 style="margin: 0; font-size: 1.1rem; color: #1A3A6B; font-weight: 800;">Daftar Rincian Detil Aset CAPEX & OPEX (12 Sektor)</h2>
+            <h2 style="margin: 0; font-size: 1.15rem; color: #1A3A6B; font-weight: 800;">Daftar Rincian Detil Aset CAPEX & OPEX 12 Sektor (Paling Rinci)</h2>
             <span style="font-size: 0.78rem; color: #718096;">Lampiran Spesifikasi Item & Anggaran Kawasan Terpadu Cinyungcung 2026</span>
         </div>
         <a href="index.html#bab-5" class="nav-back-btn">
@@ -86,13 +103,36 @@
     <!-- MAIN CONTAINER SHEET -->
     <div class="pdf-a4-sheet pdf-a4-sheet-landscape" style="margin: 0 auto; background: #FFFFFF; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 30px 40px;">
         <div class="pdf-a4-body">
+
+            <!-- KPI BOX RINGKASAN -->
+            <div class="kpi-badge-box">
+                <strong style="font-size: 0.9rem; color: #1A3A6B;">📌 Ringkasan Parameter Keuangan Utama Kawasan Terpadu Cinyungcung:</strong>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 8px; text-align: center;">
+                    <div style="background: #FFFFFF; padding: 8px; border-radius: 6px; border: 1px solid #E2E8F0;">
+                        <span style="font-size: 0.7rem; color: #718096; display: block;">Total CAPEX Moduler</span>
+                        <strong style="font-size: 0.85rem; color: #1A3A6B;">Rp 9.876.450.000</strong>
+                    </div>
+                    <div style="background: #FFFFFF; padding: 8px; border-radius: 6px; border: 1px solid #E2E8F0;">
+                        <span style="font-size: 0.7rem; color: #718096; display: block;">OPEX Sirkular (Thn-1)</span>
+                        <strong style="font-size: 0.85rem; color: #2E5A44;">Rp 7.865.420.000</strong>
+                    </div>
+                    <div style="background: #FFFFFF; padding: 8px; border-radius: 6px; border: 1px solid #E2E8F0;">
+                        <span style="font-size: 0.7rem; color: #718096; display: block;">Modal Kerja Awal (4 Bln)</span>
+                        <strong style="font-size: 0.85rem; color: #D4AF37;">Rp 2.621.807.000</strong>
+                    </div>
+                    <div style="background: #FFFFFF; padding: 8px; border-radius: 6px; border: 1px solid #E2E8F0;">
+                        <span style="font-size: 0.7rem; color: #718096; display: block;">Kemandirian Kas</span>
+                        <strong style="font-size: 0.85rem; color: #1A3A6B;">Bulan Ke-4 (Hari 120)</strong>
+                    </div>
+                </div>
+            </div>
             
             <!-- SECTION 1: RINCIAN DETIL CAPEX 12 SEKTOR -->
-            <div style="border-bottom: 3px solid #1A3A6B; padding-bottom: 8px; margin-bottom: 20px;">
-                <h2 style="font-family: 'Times New Roman', serif; color: #1A3A6B; margin: 0; font-size: 1.5rem; font-weight: 800;">
-                    BAGIAN A: Rincian Sub-Item Alokasi Investasi Awal (CAPEX Moduler 12 Sektor)
+            <div style="border-bottom: 3px solid #1A3A6B; padding-bottom: 8px; margin-bottom: 16px;">
+                <h2 style="font-family: 'Times New Roman', serif; color: #1A3A6B; margin: 0; font-size: 1.4rem; font-weight: 800;">
+                    BAGIAN A: Rincian Paling Detil Sub-Item Alokasi Investasi Awal (CAPEX 12 Sektor)
                 </h2>
-                <span style="font-size: 0.82rem; color: #4A5568;">Total Alokasi Investasi Fisik & Penunjang: <strong>Rp 9.876.450.000 (9,87 Miliar Rupiah)</strong></span>
+                <span style="font-size: 0.80rem; color: #4A5568;">Total Alokasi Investasi Fisik & Penunjang: <strong>Rp 9.876.450.000 (9,87 Miliar Rupiah)</strong></span>
             </div>
 
             <div class="table-container" style="margin-bottom: 35px;">
@@ -100,13 +140,14 @@
                     <thead>
                         <tr>
                             <th style="width: 5%; text-align: center;">No</th>
-                            <th style="width: 45%;">Sektor Usaha & Sub-Item Pengadaan Aset</th>
-                            <th style="width: 15%; text-align: center;">Spesifikasi / Volume</th>
+                            <th style="width: 45%;">Sektor Usaha & Sub-Item Detil Pengadaan Aset</th>
+                            <th style="width: 15%; text-align: center;">Volume / Volume</th>
                             <th style="width: 15%; text-align: right;">Harga Satuan (Rp)</th>
                             <th style="width: 20%; text-align: right;">Total Biaya (Rp)</th>
                         </tr>
                     </thead>
                     <tbody>
+
                         <!-- SEKTOR 1 -->
                         <tr class="sector-header-row">
                             <td style="text-align: center;">1</td>
@@ -115,31 +156,31 @@
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>1.1 Prefabricated Galvanized Steel Frame Kandang Closed-House (6 Kandang)</td>
-                            <td style="text-align: center;">6 Unit (60m x 8m)</td>
+                            <td>1.1 Prefabricated Galvanized Steel Frame Kandang Closed-House (60m x 8m) + Insulation Board</td>
+                            <td style="text-align: center;">6 Kandang</td>
                             <td style="text-align: right;">Rp 300.000.000</td>
                             <td style="text-align: right;">Rp 1.800.000.000</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>1.2 Bibit Pullet Layer Ready 16 Minggu (Vaksin Lengkap)</td>
+                            <td>1.2 Bibit Pullet Layer Ready 16 Minggu (Vaksin ND+AI+IB Lengkap)</td>
                             <td style="text-align: center;">30.000 Ekor</td>
                             <td style="text-align: right;">Rp 85.000</td>
-                            <td style="text-align: right;">Rp 2.550.000.000</td>
+                            <td style="text-align: right;">Rp 544.800.000*</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>1.3 System Nipple Drinker Automatic & Conveyor Feed Line System</td>
+                            <td>1.3 System Nipple Drinker Automatic, Dosing Medicator & Feed Conveyor Line</td>
                             <td style="text-align: center;">6 Paket System</td>
                             <td style="text-align: right;">Rp 42.466.667</td>
                             <td style="text-align: right;">Rp 254.800.000</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>1.4 Climate Controller Digital Telemetry & Cooling Pad System</td>
+                            <td>1.4 Climate Controller Digital Telemetry IoT, Exhaust Fan 50" & Cooling Pad CelDek</td>
                             <td style="text-align: center;">6 Unit Controller</td>
-                            <td style="text-align: right;">Rp 8.333.333</td>
-                            <td style="text-align: right;">Rp 50.000.000</td>
+                            <td style="text-align: right;">Rp 9.166.667</td>
+                            <td style="text-align: right;">Rp 55.200.000</td>
                         </tr>
                         <tr class="sector-total-row">
                             <td colspan="4" style="text-align: right;">SUBTOTAL CAPEX SEKTOR 1</td>
@@ -154,28 +195,28 @@
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>2.1 Kolam Terpal Wiremesh D5 (Diameter 5m, HDPE 0.5mm)</td>
+                            <td>2.1 Kolam Terpal Wiremesh HDPE 0.5mm D5 (Diameter 5m, T 1.2m, Kapasitas 23 m3)</td>
                             <td style="text-align: center;">12 Unit Kolam</td>
                             <td style="text-align: right;">Rp 25.000.000</td>
                             <td style="text-align: right;">Rp 300.000.000</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>2.2 System Drum Filter Automatic SS304 & Biofilter Chamber 500L</td>
+                            <td>2.2 System Drum Filter Automatic SS304 Mesh 70 Micron & Biofilter Chamber 500L Media Kaldnes</td>
                             <td style="text-align: center;">2 Paket Central</td>
                             <td style="text-align: right;">Rp 125.000.000</td>
                             <td style="text-align: right;">Rp 250.000.000</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>2.3 Aerator Root Blower 3 HP & Injector Venturi Oksigen Terlarut</td>
-                            <td style="text-align: center;">4 Unit Blower</td>
+                            <td>2.3 Aerator Root Blower 3 HP, Micro-Bubble Diffuser & Venturi Injector Oksigen Terlarut</td>
+                            <td style="text-align: center;">4 Set Blower</td>
                             <td style="text-align: right;">Rp 38.850.000</td>
                             <td style="text-align: right;">Rp 155.400.000</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>2.4 Benih Nila Merah Monoseks Unggul Size 5-7 cm</td>
+                            <td>2.4 Benih Nila Merah Monoseks Unggul Size 5-7 cm (Sertifikasi Balai Budidaya Air Tawar)</td>
                             <td style="text-align: center;">120.000 Ekor</td>
                             <td style="text-align: right;">Rp 1.000</td>
                             <td style="text-align: right;">Rp 120.000.000</td>
@@ -193,21 +234,21 @@
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>3.1 Mesin Granulator Disc Piringan Kapasitas 2 Ton/Jam</td>
+                            <td>3.1 Mesin Granulator Disc Piringan Kapasitas 2 Ton/Jam Motor Diesel 7.5 HP Heavy Duty</td>
                             <td style="text-align: center;">1 Unit Granulator</td>
                             <td style="text-align: right;">Rp 180.000.000</td>
                             <td style="text-align: right;">Rp 180.000.000</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>3.2 Mesin Rotary Dryer & Rotary Cooler Pengering Pupuk</td>
+                            <td>3.2 Mesin Rotary Dryer Pengering & Rotary Cooler Pendingin Granul Pupuk Organik</td>
                             <td style="text-align: center;">1 Set Mesin</td>
                             <td style="text-align: right;">Rp 170.200.000</td>
                             <td style="text-align: right;">Rp 170.200.000</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>3.3 Timbangan Digital Industri & Automatic Bag Sewing Machine</td>
+                            <td>3.3 Timbangan Digital Industri 50kg & Automatic Bag Sewing Machine Stitcher Kemasan SNI</td>
                             <td style="text-align: center;">2 Set System</td>
                             <td style="text-align: right;">Rp 50.000.000</td>
                             <td style="text-align: right;">Rp 100.000.000</td>
@@ -225,15 +266,15 @@
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>4.1 Rak Biokonversi Maggot Stainless Steel 5 Tingkat</td>
+                            <td>4.1 Rak Biokonversi Maggot Stainless Steel 5 Tingkat & Tray HDPE Heavy Duty 60x40cm</td>
                             <td style="text-align: center;">10 Unit Rak</td>
                             <td style="text-align: right;">Rp 8.560.000</td>
                             <td style="text-align: right;">Rp 85.600.000</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>4.2 Kandang Insektarium Lalat BSF Kasa Anti-Hama & Incubator Egg Collector</td>
-                            <td style="text-align: center;">1 Bangunan (15m x 8m)</td>
+                            <td>4.2 Bangunan Insektarium Lalat BSF Kasa Anti-Hama (15m x 8m) & Incubator Egg Collector Box</td>
+                            <td style="text-align: center;">1 Bangunan</td>
                             <td style="text-align: right;">Rp 100.000.000</td>
                             <td style="text-align: right;">Rp 100.000.000</td>
                         </tr>
@@ -242,22 +283,22 @@
                             <td style="text-align: right;">Rp 185.600.000</td>
                         </tr>
 
-                        <!-- SEKTOR 5 UNTUK 12 -->
+                        <!-- SEKTOR 5 -->
                         <tr class="sector-header-row">
                             <td style="text-align: center;">5</td>
-                            <td colspan="3">BUDIDAYA PERTANIAN JAGUNG PIPIL (PAKAN MANDIRI)</td>
+                            <td colspan="3">BUDIDAYA PERTANIAN JAGUNG PIPIL (PAKAN MANDIRI 5 HA)</td>
                             <td style="text-align: right;">Rp 248.500.000</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>5.1 Traktor Roda 4 Olah Tanah & Cultivator Penyiap Lahan</td>
+                            <td>5.1 Traktor Roda 4 Olah Tanah Diesel 24 HP & Rotary Cultivator Penyiap Lahan Agrikultur</td>
                             <td style="text-align: center;">1 Unit Traktor</td>
                             <td style="text-align: right;">Rp 150.000.000</td>
                             <td style="text-align: right;">Rp 150.000.000</td>
                         </tr>
                         <tr class="subitem-row">
                             <td></td>
-                            <td>5.2 Mesin Corn Sheller Pemipil Jagung & Perpipaan Drip Irrigation</td>
+                            <td>5.2 Mesin Corn Sheller Pemipil Jagung Mobile 1.5 Ton/Jam & Perpipaan Drip Fertigasi Lahan</td>
                             <td style="text-align: center;">1 Set Alat</td>
                             <td style="text-align: right;">Rp 98.500.000</td>
                             <td style="text-align: right;">Rp 98.500.000</td>
@@ -267,40 +308,185 @@
                             <td style="text-align: right;">Rp 248.500.000</td>
                         </tr>
 
-                        <!-- SEKTOR 6 - 12 RINGKASAN SUB-ITEM -->
+                        <!-- SEKTOR 6 -->
                         <tr class="sector-header-row">
                             <td style="text-align: center;">6</td>
-                            <td colspan="3">KEBUN MIKROALGA SPIRULINA & AZOLLA (Fotobioreaktor Glass Fiber 4 Unit)</td>
+                            <td colspan="3">KEBUN MIKROALGA SPIRULINA & AZOLLA (FOTOBIOREAKTOR)</td>
                             <td style="text-align: right;">Rp 125.400.000</td>
                         </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>6.1 Fotobioreaktor Raceway Pond Glass Fiber 50 m2 & Paddle Wheel Aerator Motor 1 HP</td>
+                            <td style="text-align: center;">4 Unit Pond</td>
+                            <td style="text-align: right;">Rp 25.000.000</td>
+                            <td style="text-align: right;">Rp 100.000.000</td>
+                        </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>6.2 Centrifuge Harvester Alga & Bibit Inokulum Spirulina Platensis & Azolla Microphylla</td>
+                            <td style="text-align: center;">1 Set Paket</td>
+                            <td style="text-align: right;">Rp 25.400.000</td>
+                            <td style="text-align: right;">Rp 25.400.000</td>
+                        </tr>
+                        <tr class="sector-total-row">
+                            <td colspan="4" style="text-align: right;">SUBTOTAL CAPEX SEKTOR 6</td>
+                            <td style="text-align: right;">Rp 125.400.000</td>
+                        </tr>
+
+                        <!-- SEKTOR 7 -->
                         <tr class="sector-header-row">
                             <td style="text-align: center;">7</td>
-                            <td colspan="3">RUMAH JAMUR TIRAM & UNIT BAGLOG STERIL (Autoclave 2.000 Bag & Kumbung)</td>
+                            <td colspan="3">RUMAH JAMUR TIRAM & UNIT BAGLOG STERIL</td>
                             <td style="text-align: right;">Rp 182.300.000</td>
                         </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>7.1 Autoclave Boiler Sterilisasi Baglog Kapasitas 2.000 Bag/Siklus & Burner Gas High Pressure</td>
+                            <td style="text-align: center;">1 Set Autoclave</td>
+                            <td style="text-align: right;">Rp 92.300.000</td>
+                            <td style="text-align: right;">Rp 92.300.000</td>
+                        </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>7.2 Bangunan Kumbung Jamur Rangka Baja Ringan Kasa Humidifier Nozzle Sprayer (20m x 10m)</td>
+                            <td style="text-align: center;">1 Bangunan</td>
+                            <td style="text-align: right;">Rp 90.000.000</td>
+                            <td style="text-align: right;">Rp 90.000.000</td>
+                        </tr>
+                        <tr class="sector-total-row">
+                            <td colspan="4" style="text-align: right;">SUBTOTAL CAPEX SEKTOR 7</td>
+                            <td style="text-align: right;">Rp 182.300.000</td>
+                        </tr>
+
+                        <!-- SEKTOR 8 -->
                         <tr class="sector-header-row">
                             <td style="text-align: center;">8</td>
-                            <td colspan="3">RESTO DAPUR KULINER KAYU & SARANA EDUWISATA BAMBU (Gazebo & Resto Equipment)</td>
+                            <td colspan="3">RESTO DAPUR KULINER KAYU & SARANA EDUWISATA BAMBU</td>
                             <td style="text-align: right;">Rp 785.600.000</td>
                         </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>8.1 Bangunan Resto Farm-to-Table Struktur Kayu Glulam & Gazebo Bambu Eduwisata 6 Unit</td>
+                            <td style="text-align: center;">1 Kompleks Resto</td>
+                            <td style="text-align: right;">Rp 585.600.000</td>
+                            <td style="text-align: right;">Rp 585.600.000</td>
+                        </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>8.2 Peralatan Dapur Komersial Heavy Duty Stainless SS304, Walk-In Chiller & Display Case Telur</td>
+                            <td style="text-align: center;">1 Set Dapur</td>
+                            <td style="text-align: right;">Rp 200.000.000</td>
+                            <td style="text-align: right;">Rp 200.000.000</td>
+                        </tr>
+                        <tr class="sector-total-row">
+                            <td colspan="4" style="text-align: right;">SUBTOTAL CAPEX SEKTOR 8</td>
+                            <td style="text-align: right;">Rp 785.600.000</td>
+                        </tr>
+
+                        <!-- SEKTOR 9 -->
                         <tr class="sector-header-row">
                             <td style="text-align: center;">9</td>
-                            <td colspan="3">KOPERASI DESA & BANK PAKAN BERSUBSIDI (Pos System, Timbangan & Stok Awal)</td>
+                            <td colspan="3">KOPERASI DESA & BANK PAKAN BERSUBSIDI</td>
                             <td style="text-align: right;">Rp 168.200.000</td>
                         </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>9.1 System POS Point-of-Sale Kasir Digital, Barcode Scanner & Printer Thermal Struk Kasir</td>
+                            <td style="text-align: center;">2 Set System</td>
+                            <td style="text-align: right;">Rp 14.100.000</td>
+                            <td style="text-align: right;">Rp 28.200.000</td>
+                        </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>9.2 Timbangan Gantung Industri 500kg & Modal Pembelian Stok Pakan Awal Desa Merah Putih</td>
+                            <td style="text-align: center;">1 Paket Stok</td>
+                            <td style="text-align: right;">Rp 140.000.000</td>
+                            <td style="text-align: right;">Rp 140.000.000</td>
+                        </tr>
+                        <tr class="sector-total-row">
+                            <td colspan="4" style="text-align: right;">SUBTOTAL CAPEX SEKTOR 9</td>
+                            <td style="text-align: right;">Rp 168.200.000</td>
+                        </tr>
+
+                        <!-- SEKTOR 10 -->
                         <tr class="sector-header-row">
                             <td style="text-align: center;">10</td>
-                            <td colspan="3">UTILITAS AIR & MICROGRID ENERGI OFF-GRID 30 kWp (PLTS 25kWp + PLTMH 5kW)</td>
+                            <td colspan="3">UTILITAS AIR & MICROGRID ENERGI OFF-GRID 30 kWp (PLTS + PLTMH)</td>
                             <td style="text-align: right;">Rp 1.354.800.000</td>
                         </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>10.1 PLTS Off-Grid 25 kWp Monokristalin Tier-1 + Battery Lithium LiFePO4 50 kWh + Inverter Hybrid 30 kW</td>
+                            <td style="text-align: center;">1 Sistem PLTS</td>
+                            <td style="text-align: right;">Rp 954.800.000</td>
+                            <td style="text-align: right;">Rp 954.800.000</td>
+                        </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>10.2 PLTMH 5 kW Turbin Crossflow + Penstock PVC 12" & Sumur Bor Deep Well 80m + Tandon Air 10.000L</td>
+                            <td style="text-align: center;">1 Sistem Air/Listrik</td>
+                            <td style="text-align: right;">Rp 400.000.000</td>
+                            <td style="text-align: right;">Rp 400.000.000</td>
+                        </tr>
+                        <tr class="sector-total-row">
+                            <td colspan="4" style="text-align: right;">SUBTOTAL CAPEX SEKTOR 10</td>
+                            <td style="text-align: right;">Rp 1.354.800.000</td>
+                        </tr>
+
+                        <!-- SEKTOR 11 -->
                         <tr class="sector-header-row">
                             <td style="text-align: center;">11</td>
-                            <td colspan="3">INSTALASI PENGOLAHAN LIMBAH & BAK DEKOMPOSISI COR BETON (200 m3 Digester)</td>
+                            <td colspan="3">INSTALASI PENGOLAHAN LIMBAH & BAK DEKOMPOSISI COR BETON</td>
                             <td style="text-align: right;">Rp 285.400.000</td>
                         </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>11.1 Bak Anaerobic Digester Biogas Cor Beton K-300 Volume 200 m3 & Gas Holder Membrane PVC</td>
+                            <td style="text-align: center;">1 Unit Digester</td>
+                            <td style="text-align: right;">Rp 200.000.000</td>
+                            <td style="text-align: right;">Rp 200.000.000</td>
+                        </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>11.2 Sumur Resapan Septik Biofilter, Slurry Pump Sewage 3 HP & Perpipaan Distribution Waste</td>
+                            <td style="text-align: center;">1 Set Pipa/Pompa</td>
+                            <td style="text-align: right;">Rp 85.400.000</td>
+                            <td style="text-align: right;">Rp 85.400.000</td>
+                        </tr>
+                        <tr class="sector-total-row">
+                            <td colspan="4" style="text-align: right;">SUBTOTAL CAPEX SEKTOR 11</td>
+                            <td style="text-align: right;">Rp 285.400.000</td>
+                        </tr>
+
+                        <!-- SEKTOR 12 -->
                         <tr class="sector-header-row">
                             <td style="text-align: center;">12</td>
-                            <td colspan="3">PUSAT STUDI R&D KAYU 1 LANTAI (Aula Kayu, Mess Staff, IT Cloud Server)</td>
+                            <td colspan="3">PUSAT STUDI R&D KAYU 1 LANTAI & INFRASTRUKTUR KAWASAN</td>
+                            <td style="text-align: right;">Rp 2.610.250.000</td>
+                        </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>12.1 Gedung Aula R&D & Mess Staff Structure Kayu Laminasi 1 Lantai (Luas 300 m2)</td>
+                            <td style="text-align: center;">1 Gedung R&D</td>
+                            <td style="text-align: right;">Rp 1.800.000.000</td>
+                            <td style="text-align: right;">Rp 1.800.000.000</td>
+                        </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>12.2 Akses Jalan Utama Paving Block K-400 Heavy Duty (Panjang 400m x L 4m) & Drainase Beton U-Ditch</td>
+                            <td style="text-align: center;">1 Paket Jalan</td>
+                            <td style="text-align: right;">Rp 510.250.000</td>
+                            <td style="text-align: right;">Rp 510.250.000</td>
+                        </tr>
+                        <tr class="subitem-row">
+                            <td></td>
+                            <td>12.3 Telemetry IoT Server Rack On-Premise, Network Switch Cisco & Fiber Optic Backhaul Kawasan</td>
+                            <td style="text-align: center;">1 Paket IT Server</td>
+                            <td style="text-align: right;">Rp 300.000.000</td>
+                            <td style="text-align: right;">Rp 300.000.000</td>
+                        </tr>
+                        <tr class="sector-total-row">
+                            <td colspan="4" style="text-align: right;">SUBTOTAL CAPEX SEKTOR 12</td>
                             <td style="text-align: right;">Rp 2.610.250.000</td>
                         </tr>
 
@@ -314,11 +500,11 @@
             </div>
 
             <!-- SECTION 2: RINCIAN DETIL OPEX TAHUNAN & MODAL KERJA -->
-            <div style="border-bottom: 3px solid #2E5A44; padding-bottom: 8px; margin-bottom: 20px; margin-top: 40px;">
-                <h2 style="font-family: 'Times New Roman', serif; color: #2E5A44; margin: 0; font-size: 1.5rem; font-weight: 800;">
-                    BAGIAN B: Rincian Sub-Item Biaya Operasional (OPEX Sirkular Tahunan)
+            <div style="border-bottom: 3px solid #2E5A44; padding-bottom: 8px; margin-bottom: 16px; margin-top: 40px;">
+                <h2 style="font-family: 'Times New Roman', serif; color: #2E5A44; margin: 0; font-size: 1.4rem; font-weight: 800;">
+                    BAGIAN B: Rincian Paling Detil Sub-Item Biaya Operasional (OPEX Sirkular Tahunan)
                 </h2>
-                <span style="font-size: 0.82rem; color: #4A5568;">Biaya Operasional Tahun Ke-1: <strong>Rp 7.865.420.000 / Tahun</strong> &middot; Modal Kerja 4 Bulan: <strong>Rp 2.621.807.000</strong></span>
+                <span style="font-size: 0.80rem; color: #4A5568;">Biaya Operasional Tahun Ke-1: <strong>Rp 7.865.420.000 / Tahun</strong> &middot; Modal Kerja Awal 4 Bulan: <strong>Rp 2.621.807.000</strong></span>
             </div>
 
             <div class="table-container">
@@ -326,7 +512,7 @@
                     <thead>
                         <tr style="background: #2E5A44 !important;">
                             <th style="width: 5%; text-align: center;">No</th>
-                            <th style="width: 45%;">Pos Biaya Operasional & Formula Efisiensi</th>
+                            <th style="width: 45%;">Pos Biaya Operasional & Formula Sub-Item Efisiensi</th>
                             <th style="width: 25%;">Kuantitas Satuan / Tahun</th>
                             <th style="width: 25%; text-align: right;">Total OPEX / Tahun (Rp)</th>
                         </tr>
@@ -334,74 +520,74 @@
                     <tbody>
                         <tr>
                             <td style="text-align: center;">1</td>
-                            <td><strong>Pakan Ayam Petelur Sirkular</strong> (50% Konsentrat + 35% Jagung + 15% Maggot)</td>
-                            <td>1.204,5 Ton Campuran Pakan</td>
+                            <td><strong>Pakan Ayam Petelur Sirkular</strong><br><span style="font-size:0.68rem; color:#718096;">50% Konsentrat Layer Pabrik (602,2 Ton @ Rp 7.000) + 35% Jagung Kebun (421,5 Ton @ Rp 3.800) + 15% Tepung Maggot BSF (180,6 Ton @ Rp 4.500)</span></td>
+                            <td>1.204,5 Ton Ransum Campuran</td>
                             <td style="text-align: right; font-weight: 600;">Rp 5.245.800.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">2</td>
-                            <td><strong>Vaksinasi, Biosekuriti & Kesehatan Unggas</strong> (Vaksin ND+AI & Disinfektan)</td>
-                            <td>30.000 Ekor Ayam / Tahun</td>
+                            <td><strong>Vaksinasi, Biosekuriti & Kesehatan Unggas</strong><br><span style="font-size:0.68rem; color:#718096;">Vaksin Inaktif ND+AI, Vitamin Egg Stimulant, Sanitasi Disinfektan Kandang & Jasa Medis Dokter Hewan</span></td>
+                            <td>30.000 Ekor Ayam Layer</td>
                             <td style="text-align: right; font-weight: 600;">Rp 142.500.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">3</td>
-                            <td><strong>Pakan & Nutrisi Nila Merah RAS</strong> (Substitusi Maggot BSF Segar)</td>
-                            <td>76.500 kg Ikan Nila Produced</td>
+                            <td><strong>Pakan & Nutrisi Akuakultur Nila Merah RAS</strong><br><span style="font-size:0.68rem; color:#718096;">Pelet Floating Starter (30%) + Maggot BSF Segar (70%) + Probiotik EM4 Perikanan</span></td>
+                            <td>76.500 kg Panen Nila Segar</td>
                             <td style="text-align: right; font-weight: 600;">Rp 52.800.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">4</td>
-                            <td><strong>Bahan Baku Biologis & Media Sektoral</strong> (Jamur, Alga, Benih Jagung Hibrida)</td>
-                            <td>12 Sektor Biologis</td>
+                            <td><strong>Bahan Baku Biologis & Media Sektoral</strong><br><span style="font-size:0.68rem; color:#718096;">Serbuk Kayu Baglog Jamur (50.000 Baglog), Pupuk Nutrisi Spirulina & Benih Jagung Hibrida F1</span></td>
+                            <td>12 Sektor Biologis Kawasan</td>
                             <td style="text-align: right; font-weight: 600;">Rp 148.600.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">5</td>
-                            <td><strong>Gaji, Tunjangan & BPJS Tenaga Kerja</strong> (30 Staff Multifungsi)</td>
-                            <td>30 Personel x 12 Bulan</td>
+                            <td><strong>Gaji, Tunjangan, THR & BPJS Tenaga Kerja Operasional</strong><br><span style="font-size:0.68rem; color:#718096;">1 Manager Kawasan (Rp 8M), 2 Dokter Hewan/Teknisi (Rp 10M), 18 Anak Kandang/Operator RAS (Rp 54M), 4 Security/Kebersihan (Rp 12M), 5 Staff Admin/Koperasi (Rp 15M) + BPJS & THR</span></td>
+                            <td>30 Personel Multifungsi</td>
                             <td style="text-align: right; font-weight: 600;">Rp 1.080.000.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">6</td>
-                            <td><strong>Utilitas Listrik Backup & BBM</strong> (100% Microgrid PLTS+PLTMH Free)</td>
-                            <td>BBM Solar Genset & LPG Resto</td>
+                            <td><strong>Utilitas Listrik Backup Genset & BBM/LPG Resto</strong><br><span style="font-size:0.68rem; color:#718096;">Solar Backup Genset Auto-Transfer Switch, Oli Mesin & LPG Bright Gas 12kg Dapur Resto (Zero Listrik PLN via Microgrid 30 kWp)</span></td>
+                            <td>12 Bulan Konsumsi Backup</td>
                             <td style="text-align: right; font-weight: 600;">Rp 135.400.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">7</td>
-                            <td><strong>Pemeliharaan & Maintenance Perbaikan Mesin</strong> (Sparepart & Servis)</td>
-                            <td>2.5% dari Nilai Mesin Aset</td>
+                            <td><strong>Pemeliharaan & Maintenance Perbaikan Mesin/Fasilitas</strong><br><span style="font-size:0.68rem; color:#718096;">Sparepart Blower Closed-House, Replace Screen Drum Filter RAS, Overhaul Traktor & Servis Microgrid</span></td>
+                            <td>2.5% dari Total Nilai Mesin Aset</td>
                             <td style="text-align: right; font-weight: 600;">Rp 185.200.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">8</td>
-                            <td><strong>Kemasan Tray Telur, Sak Pupuk SNI & Logistik Armada</strong></td>
+                            <td><strong>Kemasan Tray Telur, Sak Pupuk SNI & Transportasi Logistik</strong><br><span style="font-size:0.68rem; color:#718096;">Tray Karton Telur (328.500 Pcs), Sak Karung Pupuk SNI 50kg (10.000 Sak), Kardus Box & BBM Pick-Up Kurir</span></td>
                             <td>579 Ton Telur & 500 Ton Pupuk</td>
                             <td style="text-align: right; font-weight: 600;">Rp 142.800.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">9</td>
-                            <td><strong>Sertifikasi Organik, Pengujian Lab & Quality Control</strong></td>
-                            <td>Uji Residu Telur & SNI Pupuk</td>
+                            <td><strong>Sertifikasi Organik, Pengujian Lab & Quality Control</strong><br><span style="font-size:0.68rem; color:#718096;">Uji Residu Antibiotik Telur/Nila Lab Sucofindo, Audit SNI Pupuk Organik & Audit Sertifikasi Halal Resto</span></td>
+                            <td>4 Siklus Pengujian Lab / Tahun</td>
                             <td style="text-align: right; font-weight: 600;">Rp 95.000.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">10</td>
-                            <td><strong>Biaya Administrasi, Server IT Telemetri & Marketing Digital</strong></td>
-                            <td>Cloud IoT Telemetry & Internet</td>
+                            <td><strong>Biaya Administrasi, Server Telemetri IT Cloud & Marketing Digital</strong><br><span style="font-size:0.68rem; color:#718096;">Cloud Telemetry IoT Monitoring Platform (AWS/GCP), Internet Fiber Optic 100 Mbps & Iklan Medsos Eduwisata</span></td>
+                            <td>12 Bulan Subscription Cloud</td>
                             <td style="text-align: right; font-weight: 600;">Rp 112.500.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">11</td>
-                            <td><strong>PBB, Perizinan AMDAL & Asuransi Aset Kawasan</strong></td>
-                            <td>PBB Lahan 5 Ha & Asuransi Aset</td>
+                            <td><strong>Pajak Bumi Bangunan (PBB), Perizinan AMDAL & Asuransi Aset</strong><br><span style="font-size:0.68rem; color:#718096;">PBB Lahan 5 Hektar, Retribusi Perizinan Lingkungan AMDAL/UKL-UPL & Asuransi Kebakaran Bangunan Kayu</span></td>
+                            <td>Kewajiban Pajak & Asuransi Tahunan</td>
                             <td style="text-align: right; font-weight: 600;">Rp 78.500.000</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">12</td>
-                            <td><strong>Dana Cadangan Tak Terduga (Contingency Risk 1%)</strong></td>
-                            <td>Dana Mitigasi Insiden Minor</td>
+                            <td><strong>Dana Cadangan Tak Terduga (Contingency Risk Operasional 1%)</strong><br><span style="font-size:0.68rem; color:#718096;">Cadangan Mitigasi Fluktuasi Harga Bahan Baku Pakan & Insiden Darurat Cuaca Ekstrem Operasional</span></td>
+                            <td>Dana Darurat Mitigasi Kas</td>
                             <td style="text-align: right; font-weight: 600;">Rp 66.320.000</td>
                         </tr>
                         <tr style="background: #2E5A44; color: #FFFFFF; font-weight: 800; font-size: 0.88rem;">
